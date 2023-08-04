@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre">
+        <input type="checkbox" id="suscripcion" name="suscripcion" value="true">
+        <label for="suscripcion">Suscribete a mi canal</label>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <h2>Enviando Datos del Formulario con una URL </h2>
+
+    <form action="https://ejemplo.om/procesar_formulario.php" method="post">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+</html>

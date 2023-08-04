@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento "select"</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <label for="frutas">Elige tu fruta favorita:</label>
+    <select name="frutas" id="frutas">
+        <option value="manzana">Manzana</option>
+        <option value="naranja">Naranja</option>
+        <option value="platano">Plátano</option>
+        <option value="uva">Uva</option>
+    </select>
+    
+    <label for="paises">Elige tu país:</label>
+    <select name="paises" id="paises">
+        <optgroup label="América">
+            <option value="use">Estados Unidos</option>
+            <option value="canada">Canadá</option>
+            <option value="mexico">México</option>
+        </optgroup>
+        <optgroup label="Europa">
+            <option value="espana">España</option>
+            <option value="francia">Francia</option>
+            <option value="italia">Italia</option>
+        </optgroup>
+    </select>
+    <br>
+    <label for="colores">Elige tu color favorito:</label>
+    <select name="colores" id="colores">
+        <option value="rojo">Rojo</option>
+        <option value="verde" selected>Verde</option>
+        <option value="azul">Azul</option>
+        <option value="amarillo" disable>Amarillo (no disponible)</option>
+    </select>
+
+    <br><br><br>
+    <label for="ciudades">Elige tu ciudad:</label>
+    <select name="ciudades" id="ciudades" class="select-personalizado">
+        <option value="newyork">Nueva York</option>
+        <option value="paris">París</option>
+        <option value="tokio">Tokio</option>
+    </select>
+    <br><br><br>
+
+    <label for="animales">Elige tu animal favorito:</label>
+    <select name="animales" id="animales" onchange="mostrarMensaje()">
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+        <option value="pajaro">Pájaro</option>
+    </select>
+
+    <script>
+        function mostrarMensaje() {
+            const seleccion = document.getElementById("animales").value;
+            alert("Has elegido: " + seleccion)
+        }
+    </script>
+</body>
+</html>
